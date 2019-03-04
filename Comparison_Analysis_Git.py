@@ -117,3 +117,5 @@ for col in worksheet.columns:
         worksheet.column_dimensions[column].width = adjusted_width
 
 wb.save(newFile)
+
+# Credit Reference: @chris1610 for providing the fundamental codes to making this work with my graphical user interface and improved fields.
