@@ -1,6 +1,5 @@
 # Comparison Analysis between two files. Implemented with graphical user interface (GUI). 
 # Documents changes based on changed, added, and dropped values. 
-# Credit: @chris1610 
 
 import pandas as pd
 import PySimpleGUI as sg
@@ -120,3 +119,4 @@ for col in worksheet.columns:
 
 wb.save(newFile)
 
+# Credit: @chris1610  -- Borrowed some codes to complete my project
