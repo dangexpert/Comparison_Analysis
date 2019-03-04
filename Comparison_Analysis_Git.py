@@ -1,5 +1,6 @@
 # Comparison Analysis between two files. Implemented with graphical user interface (GUI). 
-# Documents changes based on changed values, added values, or dropped values. 
+# Documents changes based on changed, added, and dropped values. 
+# Credit: @chris1610 
 
 import pandas as pd
 import PySimpleGUI as sg
@@ -9,7 +10,8 @@ import openpyxl
 layout = [[sg.Text('Select File to Compare: ')],    
                  [sg.Text('File 1', size=(8, 1)), sg.InputText("Insert Old File"), sg.FileBrowse()],      
                  [sg.Text('File 2', size=(8, 1)), sg.InputText("Insert New File"), sg.FileBrowse()], 
-                 [sg.Text('Difference', size=(8, 1)), sg.InputText()],
+                 [sg.Text('File 3 (Changes)', size=(15, 1)), sg.InputText()], 
+                 #insert new Excel File name to display all changes within a spreadsheet
                  [sg.Submit(), sg.Cancel()]]      
 
 window = sg.Window('Comparison Analysis').Layout(layout)
@@ -118,4 +120,3 @@ for col in worksheet.columns:
 
 wb.save(newFile)
 
-# Credit Reference: @chris1610 for providing the fundamental codes to making this work with my graphical user interface and improved fields.
